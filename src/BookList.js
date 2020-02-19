@@ -1,22 +1,33 @@
 import React, { Component } from "react";
 import Book from "./Book";
+import booksData from "./bookData";
 
 export default class BookList extends Component {
-  state = {
-    books: [
-      {
-        id: 1,
-        book: "book number 1",
-        author: "john doe"
-      },
-      {
-        id: 2,
-        book: "book number 2",
-        author: "john cena"
-      }
-    ]
-  };
-  //this.setState({})
+  // state = {
+  //   books: [
+  //     {
+  //       id: 1,
+  //       book: "book number 1",
+  //       author: "john doe"
+  //     },
+  //     {
+  //       id: 2,
+  //       book: "book number 2",
+  //       author: "john cena"
+  //     }
+  //   ]
+  // };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      books: booksData
+    };
+  }
+
+  // state = {
+  //   books: booksData
+  // };
   render() {
     // const books = this.state.books.map(item => item.book);
 
