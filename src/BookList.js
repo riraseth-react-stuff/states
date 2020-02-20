@@ -29,13 +29,13 @@ export default class BookList extends Component {
   //   books: booksData
   // };
 
-  handleDelete = () => {
-    console.log(`I'm from the parent container`);
+  handleDelete = id => {
+    const sortedBooks = this.state.books.filter(item => item.id !== id);
+    this.setState({ books: sortedBooks });
   };
 
   render() {
     // const books = this.state.books.map(item => item.book);
-
     return (
       <section>
         <h3>this is our BookList</h3>
